@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :entry do
-    type_of "foo"
+    comment "MyText"
+activity nil
   end
+
 end
