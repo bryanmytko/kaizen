@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: kaizen
+  database: kaizen_dev
 
 test:
   <<: *default
-  database: kaizen
+  database: kaizen_test
 
 production:
   <<: *default
-  database: kaizen
+  database: kaizen_prod
