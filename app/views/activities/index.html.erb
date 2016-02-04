@@ -1,1 +1,8 @@
-<%= @activities %>
+<div class="activities">
+  <% @activities.each do |activity| %>
+    <div class="activity">
+      <h2><%= activity.title %></h2>
+      <p><%= activity.description %></p>
+    </div>
+  <% end %>
+</div>

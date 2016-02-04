@@ -9,7 +9,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'turbolinks'
+
+gem 'skeleton-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -11,5 +11,37 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require base
+ *= require layout
+ *= require skeleton
  *= require_self
  */
+
+body {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+.main-container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.main-container h1 {
+  padding: 20px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.main-container h2 {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 28px;
+  padding: 0 0 12px 0;
+}
+
+.activities .activity {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+  margin: 40px 0;
+}
+
