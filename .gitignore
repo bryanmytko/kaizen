@@ -18,3 +18,5 @@
 # Ignore all swaps
 *.swp
 *.swo
+
+public/assets/
