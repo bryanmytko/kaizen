@@ -1,9 +1,12 @@
 <nav>
-  <ul>
-    <li><%= link_to "Login", "#" %></li>
-    <li><%= link_to "Signup", "#" %></li>
-    <li><%= link_to "About", "#" %></li>
-  </ul>
+  <div class="wrapper">
+    <%= link_to "かいぜん", root_path, class: "logo" %>
+    <ul>
+      <li><%= link_to "Login", "#" %></li>
+      <li><%= link_to "Signup", "#" %></li>
+      <li><%= link_to "About", about_index_path %></li>
+    </ul>
+  </div>
 </nav>
 <header>
   <h1>かいぜん</h1>
