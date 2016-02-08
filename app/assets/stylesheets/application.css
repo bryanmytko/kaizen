@@ -17,20 +17,58 @@
  *= require_self
  */
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
 }
 
+nav {
+  background: #000;
+  padding: 12px;
+}
+
+nav ul {
+  width: 980px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .main-container {
-  width: 960px;
+  width: 720px;
   margin: 0 auto;
   padding: 40px;
 }
 
-.main-container h1 {
-  padding: 20px;
+header {
+  margin-bottom: 66px;
+}
+
+header h1 {
+  line-height: 100px;
+  padding: 10px 0 20px 0;
   text-align: center;
   font-size: 100px;
+}
+
+header p.subtitle {
+  text-align: center;
+  margin-right: -310px;
+  margin-top: -34px;
+  font-size: 23px;
 }
 
 .main-container h2 {
@@ -40,8 +78,37 @@ body {
 }
 
 .activities .activity {
-  padding: 40px 0;
   border-bottom: 1px solid #ddd;
   margin: 40px 0;
+}
+
+.calendar {
+  height: 140px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.calendar .col:first-child {
+  border-left: 1px solid #bebebe;
+}
+
+
+.calendar .col {
+  border-top: 1px solid #bebebe;
+  width: 13px;
+  float: left;
+}
+
+.calendar .unit {
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+  background: #ccffcc;
+}
+
+footer {
+  margin-top: 120px;
+  font-size: 12px;
 }
 
