@@ -1,4 +1,7 @@
 class ActivitiesController < ApplicationController
+
+  helper :activities
+
   def index
     @activities = Activity.all
   end
