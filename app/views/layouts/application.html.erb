@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kaizen かいぜん</title>
+  <title><%= ApplicationHelper::SITE_TITLE %></title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Login</a> | </li>
-      <li><a href="#">Signup</a></li>
-    </ul>
-  </nav>
+  <%= render "header" %>
   <div class="main-container container">
-    <header>
-      <h1>かいぜん</h1>
-      <p class="subtitle">Kaizen</p>
-    </header>
     <%= yield %>
-    <footer>
-      &copy;2016 Bryan Mytko
-    </footer>
   </div>
+  <%= render "footer" %>
 </body>
 </html>

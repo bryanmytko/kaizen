@@ -35,40 +35,46 @@ nav {
 nav ul {
   width: 980px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  text-align: right;
 }
 
 nav ul li {
   display: inline;
+  padding-left: 12px;
 }
 
-nav ul li a {
+nav ul li a,
+nav ul li a:visited {
   color: #fff;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #e2e2e2;
+}
+
+header {
+  margin: 80px 0 0 0;
+}
+
+header h1 {
+  font-family: serif;
+  text-align: center;
+  font-size: 100px;
+}
+
+header h2 {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  font-size: 23px;
+  margin-right: -310px;
 }
 
 .main-container {
   width: 720px;
   margin: 0 auto;
   padding: 40px;
-}
-
-header {
-  margin-bottom: 66px;
-}
-
-header h1 {
-  line-height: 100px;
-  padding: 10px 0 20px 0;
-  text-align: center;
-  font-size: 100px;
-}
-
-header p.subtitle {
-  text-align: center;
-  margin-right: -310px;
-  margin-top: -34px;
-  font-size: 23px;
 }
 
 .main-container h2 {
@@ -82,6 +88,7 @@ header p.subtitle {
   margin: 40px 0;
 }
 
+/* This needs to be cleaned up */
 .calendar {
   height: 140px;
   width: 100%;
@@ -91,7 +98,6 @@ header p.subtitle {
 .calendar .col:first-child {
   border-left: 1px solid #bebebe;
 }
-
 
 .calendar .col {
   border-top: 1px solid #bebebe;
@@ -106,9 +112,16 @@ header p.subtitle {
   border-bottom: 1px solid #bebebe;
   background: #ccffcc;
 }
+/* End cleanup */
 
 footer {
-  margin-top: 120px;
+  width: 980px;
+  margin: 120px auto 0 auto;
+  padding: 20px;
   font-size: 12px;
+  text-align: center;
 }
 
+footer a {
+  text-decoration: none;
+}
