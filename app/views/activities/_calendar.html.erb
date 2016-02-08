@@ -1,0 +1,13 @@
+<div class="calendar group">
+  <% (start_date..end_date).each_with_index do |day, index| %>
+    <% if index % 7 == 0 %>
+      <% unless index == 0 %>
+        </div>
+      <% end %>
+      <div class="col">
+    <% end %>
+    <div class="unit unit-<%= index %> unit-<%= day %>">
+    </div>
+  <% end %>
+  </div>
+</div>
