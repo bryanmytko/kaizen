@@ -8,9 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#">Login</a> | </li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+  </nav>
   <div class="main-container container">
-    <h1>かいぜん</h1>
+    <header>
+      <h1>かいぜん</h1>
+      <p class="subtitle">Kaizen</p>
+    </header>
     <%= yield %>
+    <footer>
+      &copy;2016 Bryan Mytko
+    </footer>
   </div>
 </body>
 </html>
