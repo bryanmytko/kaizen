@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :entry do
-    comment "MyText"
-activity nil
+    comment "Lorem Ipsum"
+    association :activity
   end
-
 end
