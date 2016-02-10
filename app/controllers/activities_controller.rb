@@ -3,11 +3,11 @@ class ActivitiesController < ApplicationController
   helper :activities
 
   def index
-    @activities = Activity.all
+    @activities = Activity.all.includes(:entries).limit(2)
   end
 
   def show
-    @activity = Activity.find(params[:id])
+    @activity = Activity.find(params[:id]).includes(:entries)
   end
 
   def create

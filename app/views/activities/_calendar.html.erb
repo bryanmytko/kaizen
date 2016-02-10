@@ -2,7 +2,13 @@
 <% date_range.each_slice(ActivitiesHelper::DAY_SLICES) do |slice| %>
   <div class="col">
     <% slice.each_with_index do |day, index| %>
-      <div class="unit unit-<%= index %> unit-<%= day %>"></div>
+      <%
+         entries = activity.entries.select do |e|
+           e.created_at.to_date == day
+         end
+      %>
+    <div class="unit unit-<%= index %> unit-<%= day %> count-<%= entries.count %>">
+    </div>
     <% end %>
   </div>
 <% end %>

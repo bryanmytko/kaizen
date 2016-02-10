@@ -3,7 +3,7 @@
     <div class="activity">
       <h2><%= activity.title %></h2>
       <p><%= activity.description %></p>
-      <%= render "calendar" %>
+      <%= render "calendar", activity: activity %>
     </div>
   <% end %>
 </div>
