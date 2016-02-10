@@ -1,9 +1,8 @@
 class ActivitiesController < ApplicationController
-
   helper :activities
 
   def index
-    @activities = Activity.all.includes(:entries).limit(2)
+    @activities = Activity.all.includes(:entries)
   end
 
   def show
