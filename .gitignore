@@ -20,3 +20,5 @@
 *.swo
 
 public/assets/
+
+.DS_Store
