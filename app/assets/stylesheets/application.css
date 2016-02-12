@@ -130,6 +130,9 @@ header h2 {
 .calendar .count-1 {
   background: #627684;
 }
+
+.tpd-content-wrapper span.ok { color: #0f0 }
+.tpd-content-wrapper span.x { color: #f00 }
 /* End cleanup */
 
 footer {
