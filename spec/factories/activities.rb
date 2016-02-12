@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :activity do
-    title "MyString"
-    description "MyString"
+    title Faker::Company.catch_phrase
+    description Faker::Lorem.sentence
   end
 end

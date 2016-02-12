@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :entry do
-    comment "Lorem Ipsum"
+    comment Faker::Lorem.sentence
     association :activity
   end
 end
