@@ -7,7 +7,10 @@
            e.created_at.to_date == day
          end
       %>
-    <div class="unit unit-<%= index %> count-<%= entries.count %>" data-date="<%= day %>" data-complete="<%= entries.count > 0 %>">
+    <div class="unit unit-<%= index %>"
+      data-count="<%= entries.count %>"
+      data-date="<%= day.strftime("%B %d, %Y") %>"
+      data-complete="<%= entries.count > 0 %>" >
     </div>
     <% end %>
   </div>
