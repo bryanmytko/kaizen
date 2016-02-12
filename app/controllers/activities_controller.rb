@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.includes(:entries).all
+    @entry = Entry.new
   end
 
   def show

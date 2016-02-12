@@ -102,19 +102,21 @@ header h2 {
   margin: 40px 0;
 }
 
-/* This needs to be cleaned up */
+.activity form {
+  margin-bottom: 30px;
+}
+
 .calendar {
-  height: 140px;
   width: 100%;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .calendar .col:first-child {
-  border-left: 1px solid #bebebe;
+  border-left: 1px solid #000;
 }
 
 .calendar .col {
-  border-top: 1px solid #bebebe;
+  border-top: 1px solid #000;
   width: 13px;
   float: left;
 }
@@ -122,17 +124,26 @@ header h2 {
 .calendar .unit {
   width: 12px;
   height: 12px;
-  border-right: 1px solid #bebebe;
-  border-bottom: 1px solid #bebebe;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
   background: #E9FAFF;
 }
 
-.calendar .count-1 {
+.calendar .high {
   background: #627684;
+}
+
+.calendar .medium {
+  background: rgba(98, 118, 132, 0.8);
+}
+
+.calendar .low {
+  background: rgba(98, 118, 132, 0.5);
 }
 
 .tpd-content-wrapper span.ok { color: #0f0 }
 .tpd-content-wrapper span.x { color: #f00 }
+
 /* End cleanup */
 
 footer {
