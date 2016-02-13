@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root "activities#index"
+  root "sessions#index"
+
+  post "login", to: "sessions#login", as: "login"
+  get "logout", to: "sessions#logout", as: "logout"
 
   resources :activities do
     resources :entries, only: :create
