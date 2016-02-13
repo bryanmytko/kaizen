@@ -144,6 +144,23 @@ header h2 {
 .tpd-content-wrapper span.ok { color: #0f0 }
 .tpd-content-wrapper span.x { color: #f00 }
 
+.login form {
+  margin: 60px auto 0 auto;
+  width: 400px;
+}
+.login form input[type=text],
+.login form input[type=email],
+.login form input[type=password] {
+  width: 100%;
+}
+
+.login form input[type=submit] {
+  background: #337ab7;
+  color: #fff;
+  text-shadow: none;
+  font-size: 14px;
+}
+
 /* End cleanup */
 
 footer {
