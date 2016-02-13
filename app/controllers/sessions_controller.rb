@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.is_password?(session_params[:password])
       session[:current_user_id] = @user.id
-      redirect_to activities_path
+      redirect_to root_path
     else
       render text: "Invalid Email/Password"
     end

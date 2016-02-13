@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
       @activities = Activity.includes(:entries).where(user_id: current_user.id)
       @entry = Entry.new
     else
-      redirect_to root_path
+      redirect_to login_path
     end
   end
 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root "sessions#index"
+  root "activities#index"
 
-  post "login", to: "sessions#login", as: "login"
+  post "login", to: "sessions#login", as: "create_login"
+  get "login",  to: "sessions#index"
   get "logout", to: "sessions#logout", as: "logout"
 
   resources :activities do
