@@ -2,8 +2,12 @@ class ActivitiesController < ApplicationController
   helper :activities
 
   def index
-    @activities = Activity.includes(:entries).all
-    @entry = Entry.new
+    if current_user
+      @activities = Activity.includes(:entries).where(user_id: current_user.id)
+      @entry = Entry.new
+    else
+      redirect_to root_path
+    end
   end
 
   def show
