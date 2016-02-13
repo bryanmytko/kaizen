@@ -85,6 +85,13 @@ header h2 {
   padding-left: 310px;
 }
 
+h3 {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  font-size: 23px;
+  color: #337ab7;
+}
+
 .main-container {
   width: 720px;
   margin: 0 auto;
@@ -144,21 +151,46 @@ header h2 {
 .tpd-content-wrapper span.ok { color: #0f0 }
 .tpd-content-wrapper span.x { color: #f00 }
 
-.login form {
+.home-form-container {
   margin: 60px auto 0 auto;
   width: 400px;
 }
-.login form input[type=text],
-.login form input[type=email],
-.login form input[type=password] {
+
+.home-form-container form {}
+
+.home-form-container ul {
+  margin: 0 0 12px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.home-form-container ul li {
+  display: inline;
+  padding: 12px;
+  border-top-left-radius: 8px;
+  margin-left: -10px;
+}
+
+.home-form-container ul li a {
+  text-decoration: none;
+  padding-right: 12px;
+}
+
+.home-form-container form input[type=text],
+.home-form-container form input[type=email],
+.home-form-container form input[type=password] {
   width: 100%;
 }
 
-.login form input[type=submit] {
+.home-form-container form input[type=submit] {
   background: #337ab7;
   color: #fff;
   text-shadow: none;
   font-size: 14px;
+}
+
+.home-form-container .login {
+  display: none;
 }
 
 /* End cleanup */
