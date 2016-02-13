@@ -13,6 +13,6 @@ test:
 
 production:
   adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %> #This is the environment variable created by our Dokku command earlier
+  url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
   pool: 5
