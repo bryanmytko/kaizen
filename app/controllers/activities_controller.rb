@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
       @activities = Activity.includes(:entries).where(user_id: current_user.id)
       @entry = Entry.new
     else
-      redirect_to login_path
+      redirect_to signup_path
     end
   end
 
@@ -14,12 +14,24 @@ class ActivitiesController < ApplicationController
     @activity = Activity.includes(:entries).find(params[:id])
   end
 
+  def new
+    @activity = Activity.new
+  end
+
   def create
+    @activity = Activity.new(activity_params)
+    @activity.user = current_user
+
+    if @activity.save
+      redirect_to activities_path
+    else
+      render :new
+    end
   end
 
-  def update
-  end
+  private
 
-  def destroy
+  def activity_params
+    params.require(:activity).permit(:title, :description)
   end
 end
