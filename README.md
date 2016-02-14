@@ -1,2 +1,6 @@
-<h1>かいぜん</h1>
-<p>A tool. Soon.</p>
+# かいぜん
+
+A tool for daily improvement.
+
+(http://kaizen.website)[http://kaizen.website]
+
