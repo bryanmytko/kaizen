@@ -4,7 +4,7 @@
     <% slice.each_with_index do |day, index| %>
       <%
          entries = activity.entries.select do |e|
-           e.created_at.to_date == day
+           e.created_at.in_time_zone(Time.zone.name).to_date == day
          end
       %>
     <div class="unit unit-<%= index %>"
