@@ -1,0 +1,13 @@
+<div class="form-container">
+  <h3>Create An Activity</h3>
+  <%= form_for :activity, url: activities_path do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control' %>
+
+
+    <%= f.submit "Create!", class: "btn btn-primary" %>
+  <% end %>
+</div>

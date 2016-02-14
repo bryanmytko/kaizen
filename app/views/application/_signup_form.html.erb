@@ -1,0 +1,11 @@
+<%= form_for @user, url: users_path do |f| %>
+  <%= email_errors %>
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= password_errors %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.submit "Sign Up", class: "btn btn-primary" %>
+<% end %>
