@@ -12,22 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.cookie
+//= require jstz
+//= require browser_timezone_rails/set_time_zone
 //= require_tree .
 //
 //
-$(document).ready(function(){
-
-  var login_tab = $('.home-form-container li.login-tab');
-  var login_form = $('.home-form-container div.login');
-
-  var signup_tab = $('.home-form-container li.signup-tab');
-  var signup_form = $('.home-form-container div.signup');
-
-  login_tab.click(toggle_home_form);
-  signup_tab.click(toggle_home_form);
-
-  var toggle_home_form = function(){
-    signup_form.toggle();
-    login_form.toggle();
-  };
-});

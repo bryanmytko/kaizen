@@ -151,46 +151,33 @@ h3 {
 .tpd-content-wrapper span.ok { color: #0f0 }
 .tpd-content-wrapper span.x { color: #f00 }
 
-.home-form-container {
+.form-container {
   margin: 60px auto 0 auto;
   width: 400px;
 }
 
-.home-form-container form {}
+.form-container form {}
 
-.home-form-container ul {
-  margin: 0 0 12px 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.home-form-container ul li {
-  display: inline;
-  padding: 12px;
-  border-top-left-radius: 8px;
-  margin-left: -10px;
-}
-
-.home-form-container ul li a {
-  text-decoration: none;
-  padding-right: 12px;
-}
-
-.home-form-container form input[type=text],
-.home-form-container form input[type=email],
-.home-form-container form input[type=password] {
+.form-container form input[type=text],
+.form-container form input[type=email],
+.form-container form input[type=password] {
   width: 100%;
 }
 
-.home-form-container form input[type=submit] {
+.form-container form input[type=submit] {
   background: #337ab7;
   color: #fff;
   text-shadow: none;
   font-size: 14px;
 }
 
-.home-form-container .login {
-  display: none;
+.no-activities {
+  text-align: center;
+}
+
+.no-activities a,
+.no-activities a:visited {
+  color: #337ab7;
 }
 
 /* End cleanup */
