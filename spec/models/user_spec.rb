@@ -18,7 +18,7 @@ RSpec.describe User, type: :model do
 
   it "is invalid with a non-unique email" do
     existing_user = FactoryGirl.create(:user)
-    new_user = FactoryGirl.create(:user, email: existing_user.email)
+    new_user = FactoryGirl.build(:user, email: existing_user.email)
 
     expect(new_user).to be_invalid
   end
