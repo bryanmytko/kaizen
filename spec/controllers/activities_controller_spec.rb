@@ -2,14 +2,17 @@ require 'rails_helper'
 
 describe ActivitiesController, type: :controller do
   describe "GET #index" do
+    let(:user) { user = FactoryGirl.create(:user) }
+    before { allow(controller).to receive(:current_user) { user } }
+
     it "responds with a 200 ok" do
       get :index
       expect(response).to have_http_status(200)
     end
 
     it "shows all activities" do
-      a1 = FactoryGirl.create(:activity)
-      a2 = FactoryGirl.create(:activity)
+      a1 = FactoryGirl.create(:activity, user: user)
+      a2 = FactoryGirl.create(:activity, user: user)
 
       get :index
       expect(assigns(:activities)).to match_array([a1, a2])
