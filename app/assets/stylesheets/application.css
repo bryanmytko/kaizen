@@ -180,6 +180,10 @@ h3 {
   color: #337ab7;
 }
 
+span.error {
+  color: #f00;
+}
+
 /* End cleanup */
 
 footer {
