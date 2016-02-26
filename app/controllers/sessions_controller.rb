@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to root_path
     else
-      render text: "Invalid Email/Password"
+      flash[:error] = "Invalid email/password combination"
+      render :index
     end
   end
 
