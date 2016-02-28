@@ -6,15 +6,22 @@ $(document).ready(function(){
   });
 
   $("#new_entry").submit(function(e){
-    $.post("/activities/" + $(this).data("id") + "/entries", { "entry": { "comment": "fpp"}}, function(data){
-      var unit = $(".unit").last();
-      unit.data("count", unit.data("count") + 1);
-      unit.data("complete", true);
-      color_boxes(unit);
-      add_flag(unit);
-      unit.addClass("flash");
-      $("#new_entry")[0].reset();
-    });
+    var comment = $(this).children("#entry_comment").val();
+
+    $.post(
+      "/activities/" + $(this).data("id") + "/entries",
+      { "entry": { "comment": comment}},
+      function(data){
+        var unit = $(".unit").last();
+        unit.data("count", unit.data("count") + 1);
+        unit.data("complete", true);
+        color_boxes(unit);
+        add_flag(unit);
+        unit.addClass("flash");
+        $("#new_entry")[0].reset();
+      }
+    );
+
     e.preventDefault();
   });
 
