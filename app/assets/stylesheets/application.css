@@ -136,16 +136,16 @@ h3 {
   background: #E9FAFF;
 }
 
-.calendar .high {
-  background: #627684;
+.calendar .low {
+  background: rgba(98, 118, 132, 0.5);
 }
 
 .calendar .medium {
   background: rgba(98, 118, 132, 0.8);
 }
 
-.calendar .low {
-  background: rgba(98, 118, 132, 0.5);
+.calendar .high {
+  background: #627684;
 }
 
 .tpd-content-wrapper span.ok { color: #0f0 }
@@ -182,6 +182,41 @@ h3 {
 
 span.error {
   color: #f00;
+}
+
+p.contributions {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.flash {
+  -moz-animation: flash .5s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash .5s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash .5s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: #fff; }
+  100% { background-color: none; }
+}
+
+@-moz-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: #fff; }
+  100% { background-color: none; }
+}
+
+@-ms-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: #fff; }
+  100% { background-color: none; }
 }
 
 /* End cleanup */
