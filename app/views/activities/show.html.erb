@@ -1,1 +1,10 @@
-<%= @activity %>
+<h1><%= @activity.title %></h1>
+<p><em><%= @activity.description %></em></p>
+<div class="activity-entries">
+  <% @activity.entries.each do |entry| %>
+    <p>
+      <%= entry.comment %><br />
+      <span class="entry-date"><%= entry.created_at.strftime("%b %d, %Y") %></span>
+    </p>
+  <% end %>
+</div>
