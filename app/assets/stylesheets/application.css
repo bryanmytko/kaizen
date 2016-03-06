@@ -109,8 +109,21 @@ h3 {
   margin: 40px 0;
 }
 
+.activities .activity h2 a {
+  text-decoration: none;
+}
+
+.activities .activity h2 a:hover {
+  opacity: .6;
+}
+
 .activity form {
   margin-bottom: 30px;
+}
+
+.activity-entries .entry-date {
+  font-size: .7em;
+  opacity: .3;
 }
 
 .calendar {
