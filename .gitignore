@@ -24,3 +24,4 @@ public/assets/
 .DS_Store
 
 .byebug_history
+coverage
