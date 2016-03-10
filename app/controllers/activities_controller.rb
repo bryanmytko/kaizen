@@ -1,13 +1,10 @@
 class ActivitiesController < ApplicationController
   helper :activities
+  before_action :validate_user
 
   def index
-    if current_user
-      @activities = Activity.includes(:entries).where(user_id: current_user.id)
-      @entry = Entry.new
-    else
-      redirect_to signup_path
-    end
+    @activities = Activity.includes(:entries).where(user_id: current_user.id)
+    @entry = Entry.new
   end
 
   def show
@@ -33,5 +30,9 @@ class ActivitiesController < ApplicationController
 
   def activity_params
     params.require(:activity).permit(:title, :description)
+  end
+
+  def validate_user
+    redirect_to signup_path unless current_user
   end
 end
