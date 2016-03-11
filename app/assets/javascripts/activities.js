@@ -5,20 +5,21 @@ $(document).ready(function(){
     add_flag(_this);
   });
 
-  $("#new_entry").submit(function(e){
-    var comment = $(this).children("#entry_comment").val();
+  $(".new-entry").submit(function(e){
+    var container = $(this).parent(".activity");
+    var comment = $(this).children(".entry-comment").val();
 
     $.post(
       "/activities/" + $(this).data("id") + "/entries",
-      { "entry": { "comment": comment}},
+      { "entry": { "comment": comment } },
       function(data){
-        var unit = $(".unit").last();
+        var unit = container.find(".unit").last();
         unit.data("count", unit.data("count") + 1);
         unit.data("complete", true);
         color_boxes(unit);
         add_flag(unit);
         unit.addClass("flash");
-        $("#new_entry")[0].reset();
+        container.find(".new-entry")[0].reset();
       }
     );
 

@@ -10,8 +10,15 @@
         <h2><%= link_to activity.title, activity_path(activity.id) %></h2>
         <p><%= activity.description %></p>
         <%= render "calendar", activity: activity %>
-        <%= form_for @entry, data: { id: activity.id }, url: activity_entries_path(activity) do |f| %>
-          <% f.text_field :comment, placeholder: "What did you do today?" %>
+        <%= form_for @entry,
+          data: { id: activity.id },
+          html: { class: "new-entry", id: nil },
+          url: activity_entries_path(activity) do |f| %>
+          <% f.text_field :comment,
+            placeholder: "What did you do today?",
+            class: "entry-comment",
+            id: nil
+          %>
         <% end %>
       </div>
     <% end %>
